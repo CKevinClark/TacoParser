@@ -32,9 +32,16 @@ namespace LoggingKata.Test
 
             //Arrange
 
+            var trackableParse = new TacoParser();
+
             //Act
 
+            var actual = trackableParse.Parse(line);
+
             //Assert
+
+            Assert.Equal(expected, actual.Location.Longitude); 
+
         }
 
 
